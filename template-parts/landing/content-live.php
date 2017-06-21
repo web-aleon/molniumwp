@@ -22,6 +22,6 @@
           <p>ПОКА ВЫ РАЗДУМЫВАЕТЕ, КОНКУРЕНТЫ НЕ СПЯТ... СДЕЛАЙТЕ ПЕРВЫЙ ШАГ</p>
           <img src="<?php echo ( get_template_directory_uri() . '/img/live-arrow.png' ); ?>" alt="">
         </div>
-        <button class="btn ttu">бесплатная консультация</button>
+        <button class="btn ttu popmake-besplatnaya-konsultatsiya">бесплатная консультация</button>
       </div>
     </div>

@@ -25,6 +25,6 @@
           </div>
         </div>
         <p class="bottom">Нужны впечатляющие результаты? <span>ДАДИМ КОНКРЕТНЫЕ РЕКОММЕНДАЦИИ БЕСПЛАТНО</span></p>
-        <button class="btn ttu">бесплатная  консультация</button>
+        <button class="btn ttu popmake-besplatnaya-konsultatsiya">бесплатная  консультация</button>
       </div>
     </section>

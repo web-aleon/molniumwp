@@ -23,11 +23,15 @@
           </div>
           <div class="col col2">
             <h3>ОПЫТ, СТАТЬИ, НОВОСТИ</h3>
-            <form action="" id="footForm">
+            <?php 
+              echo do_shortcode( '[contact-form-7 id="18" title="Форма в Подвале"]' ); 
+            ?>
+
+           <!--  <form action="" id="footForm">
               <input type="text" name="name" placeholder="Имя">
               <input type="email" name="email" placeholder="E-mail">
               <button class="btn ttu">подписаться на РАССЫЛКУ</button>
-            </form>
+            </form> -->
           </div>
           <div class="col col3">
             <h3>Контакты</h3>

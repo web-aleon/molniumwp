@@ -172,7 +172,8 @@ h2{
 .no-wrap{
   white-space: nowrap;
 }
-button.btn{
+button.btn,
+input.btn{
   background-color: @mainColor;
   text-align: center;
   border: none;
@@ -611,7 +612,7 @@ button.btn{
       }
     }
 
-    input{
+    input.inpt{
       display: block;
       width: 100%;
       border: none;
@@ -630,7 +631,7 @@ button.btn{
         margin-bottom: 20px;
       }
     }
-    button{
+    .btn{
       .size(223px, 55px);
 
       @media (max-width: 1284px){
@@ -2974,7 +2975,7 @@ button.btn{
         border: none;
       }
       
-      input{
+      input.inpt{
         .size(100%, 46px);
         margin-bottom: 18px;
         padding-left: 15px;
@@ -2983,8 +2984,9 @@ button.btn{
         .placeholder({color: #fff;});
 
       }
-      button{
+      .btn{
         .size(100%, 55px);
+        display: inline-block;
         background-color: @secColor;
         border: none;
         color: @fontColor;
@@ -3130,5 +3132,29 @@ button.btn{
     .col2{
 
     }
+  }
+}
+
+/*POPUP FORM*/
+.popmake-content{
+  text-align: center;
+
+  input.inpt{
+    display: block;
+    width: 100%;
+    border: 2px solid #005e7f;
+    padding: 0 15px;
+    border-radius: 5px;
+    line-height: 38px;
+    padding-top: 3px;
+    margin-bottom: 20px;
+    
+       
+  }
+  .btn{
+    .size(100%, 55px);
+
+    
+    
   }
 }

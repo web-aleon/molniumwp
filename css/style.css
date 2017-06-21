@@ -193,7 +193,8 @@ h2 {
   white-space: nowrap;
 }
 
-button.btn {
+button.btn,
+input.btn {
   background-color: #ce0c14;
   text-align: center;
   border: none;
@@ -211,7 +212,8 @@ button.btn {
 }
 
 @media (max-width: 1284px) {
-  button.btn {
+  button.btn,
+  input.btn {
     font-size: 16px;
     border-top-width: 1px;
     border-bottom-width: 1px;
@@ -219,12 +221,14 @@ button.btn {
 }
 
 @media (max-width: 767px) {
-  button.btn {
+  button.btn,
+  input.btn {
     font-weight: bold;
   }
 }
 
-button.btn:hover {
+button.btn:hover,
+input.btn:hover {
   background-color: #740b0f;
 }
 
@@ -808,7 +812,7 @@ button.btn:hover {
   }
 }
 
-#banner .form input {
+#banner .form input.inpt {
   display: block;
   width: 100%;
   border: none;
@@ -819,7 +823,7 @@ button.btn:hover {
 }
 
 @media (max-width: 1284px) {
-  #banner .form input {
+  #banner .form input.inpt {
     line-height: 38px;
     margin-bottom: 13px;
     font-size: 14px;
@@ -828,25 +832,25 @@ button.btn:hover {
 }
 
 @media (max-width: 767px) {
-  #banner .form input {
+  #banner .form input.inpt {
     margin-bottom: 20px;
   }
 }
 
-#banner .form button {
+#banner .form .btn {
   width: 223px;
   height: 55px;
 }
 
 @media (max-width: 1284px) {
-  #banner .form button {
+  #banner .form .btn {
     width: 173px;
     height: 38px;
   }
 }
 
 @media (max-width: 1006px) {
-  #banner .form button {
+  #banner .form .btn {
     width: 140px;
     height: 34px;
   }
@@ -4076,7 +4080,7 @@ button.btn:hover {
   }
 }
 
-#footer .content-top .col2 input {
+#footer .content-top .col2 input.inpt {
   width: 100%;
   height: 46px;
   margin-bottom: 18px;
@@ -4085,32 +4089,33 @@ button.btn:hover {
   border: 3px solid #fff;
 }
 
-#footer .content-top .col2 input::-webkit-input-placeholder {
+#footer .content-top .col2 input.inpt::-webkit-input-placeholder {
   color: #fff;
 }
 
-#footer .content-top .col2 input:-moz-placeholder {
+#footer .content-top .col2 input.inpt:-moz-placeholder {
   color: #fff;
 }
 
-#footer .content-top .col2 input::-moz-placeholder {
+#footer .content-top .col2 input.inpt::-moz-placeholder {
   color: #fff;
 }
 
-#footer .content-top .col2 input:-ms-input-placeholder {
+#footer .content-top .col2 input.inpt:-ms-input-placeholder {
   color: #fff;
 }
 
-#footer .content-top .col2 button {
+#footer .content-top .col2 .btn {
   width: 100%;
   height: 55px;
+  display: inline-block;
   background-color: #f6d258;
   border: none;
   color: #12171a;
   font-weight: 700;
 }
 
-#footer .content-top .col2 button:hover {
+#footer .content-top .col2 .btn:hover {
   background-color: #dcad0c;
 }
 
@@ -4279,4 +4284,26 @@ button.btn:hover {
     margin-bottom: 0;
     font-weight: 600;
   }
+}
+
+/*POPUP FORM*/
+
+.popmake-content {
+  text-align: center;
+}
+
+.popmake-content input.inpt {
+  display: block;
+  width: 100%;
+  border: 2px solid #005e7f;
+  padding: 0 15px;
+  border-radius: 5px;
+  line-height: 38px;
+  padding-top: 3px;
+  margin-bottom: 20px;
+}
+
+.popmake-content .btn {
+  width: 100%;
+  height: 55px;
 }

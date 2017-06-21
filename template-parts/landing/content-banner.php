@@ -37,11 +37,16 @@
           </div>
           <div class="form">
             <p>Получите рекоммендации по увеличению прибыли на бесплатной консультации</p>
-            <form action="" id="bannerForm">
+
+            <?php 
+              echo do_shortcode( '[contact-form-7 id="17" title="Форма Баннера"]' ); 
+            ?>
+
+            <!-- <form action="" id="bannerForm">
               <input type="name" name="name" placeholder="ИМЯ">
               <input type="email" email="email" placeholder="E-MAIL">
               <button class="btn ttu">Записаться</button>
-            </form>
+            </form> -->
           </div>
         </div>
       </div>
