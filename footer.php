@@ -13,19 +13,77 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'molnium' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'molnium' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'molnium' ), 'molnium', '<a href="https://automattic.com/">Underscores.me</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<!-- FOOTER     -->
+    <footer id="footer" role="contentinfo">
+      <div class="container">
+        <div class="content-top clearfix">
+          <div class="col col1">
+            <a href="/" class="foot-logo"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-logo.png' ); ?>" alt="Molnium logo"></a>
+            <p>Самые современные инструменты для повышения прибыли и эффективности Вашего бизнеса!</p>
+          </div>
+          <div class="col col2">
+            <h3>ОПЫТ, СТАТЬИ, НОВОСТИ</h3>
+            <form action="" id="footForm">
+              <input type="text" name="name" placeholder="Имя">
+              <input type="email" name="email" placeholder="E-mail">
+              <button class="btn ttu">подписаться на РАССЫЛКУ</button>
+            </form>
+          </div>
+          <div class="col col3">
+            <h3>Контакты</h3>
+            <div class="foot-contact-item fc-phone">
+              <div class="icon-box"><i class="ph-icon ph-icon-b icon-rotate">v</i></div>
+              <div class="contact-info">
+                <p><a href="tel:965555">96-55-55</a>, <br><a href="mailto:molnium@gmail.com"><span>Molnium@gmail.com</span></a></p>
+              </div>
+            </div>
+            <div class="foot-contact-item">
+              <div class="icon-box"><i class="ph-icon ph-icon-a">a</i></div>
+              <div class="contact-info">
+                <p>Владикавказ, <br><span>Цоколаева 5</span></p>
+              </div>
+            </div>
+            <div class="foot-contact-item">
+              <div class="icon-box"><i class="ph-icon ph-icon-d">c</i></div>
+              <div class="contact-info">
+                <p>Пн-Пт 9<sup>00</sup> - 19<sup>00</sup>, <br><span>Сб - Вс 10<sup>00</sup> - 15<sup>00</sup></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="content-bottom clearfix">
+          <div class="col col1">
+            <div class="social">
+              <a href="#"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-insta.png' ); ?>" alt=""></a>
+              <a href="#"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-vk.png' ); ?>" alt=""></a>
+              <a href="#"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-youtube.png' ); ?>" alt=""></a>
+            </div>
+            <p class="copyright">Copy Rights ©  2017 “Molnium” All Rights Reserved</p>
+          </div>
+          <div class="col col2">
+            <h3>Последние статьи</h3>
+            <ul>
+              <li><a href="#">Маркетинговая стратегия с нуля</a></li>
+              <li><a href="#">Внеконкурентный бизнес уже завтра</a></li>
+              <li><a href="#">Где найти состоятельных клиентов</a></li>
+              <li><a href="#">Как найти ценных сотрудников</a></li>
+              <li><a href="#">Зачем вести клиентскую базу</a></li>
+            </ul>
+          </div>
+          <div class="col col3">
+            <h3>Быстрые ссылки</h3>
+            <ul>
+              <li><a href="#">Главная</a></li>
+              <li><a href="#">О Компании</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Карта сайта</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

@@ -23,32 +23,34 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'molnium' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'molnium' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<!-- HEADER   -->
+    <header id="header" role="banner">
+      <div class="container">
+        <a href="/" class="logo"><img src="<?php echo ( get_template_directory_uri() . '/img/logo.png' ); ?>" alt="Molnium"></a>
+        <div class="header_contact">
+          <div class="header_contact-item">
+            <i class="ph-icon ph-icon-b icon-rotate">v</i>
+            <div class="contact-info">
+              <a href="tel:965555" class="info-main">96-55-55</a>
+              <a href="mailto:molnium@gmail.com" class="info-secondary">Molnium@gmail.com</a>
+            </div>
+          </div>
+          <div class="header_contact-item">
+            <i class="ph-icon ph-icon-a">a</i>
+            <div class="contact-info ">
+              <p class="info-main">Владикавказ</p>
+              <p class="info-secondary">Цоколаева, 5</p>
+            </div>
+          </div>
+          <div class="header_contact-item">
+            <i class="ph-icon ph-icon-d">c</i>
+            <div class="contact-info">
+              <p class="info-main">Пн-Пт 9<sup>00</sup> - 19<sup>00</sup></p>
+              <p class="info-secondary">Сб - Вс 10<sup>00</sup> - 15<sup>00</sup></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
 	<div id="content" class="site-content">
