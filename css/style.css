@@ -167,6 +167,10 @@ h2 {
   font-family: 'PhantonIconsB';
 }
 
+.ph-icon-c {
+  font-family: 'PhantonIconsC';
+}
+
 .ph-icon-d {
   font-family: 'PhantonIconsD';
 }
@@ -241,12 +245,12 @@ button.btn:hover {
   width: 100%;
 }
 
-#header a.logo {
+#header a.custom-logo-link {
   float: left;
 }
 
 @media (max-width: 767px) {
-  #header a.logo {
+  #header a.custom-logo-link {
     display: block;
     width: 100%;
     text-align: center;
@@ -254,21 +258,21 @@ button.btn:hover {
 }
 
 @media (max-width: 1284px) {
-  #header a.logo img {
+  #header a.custom-logo-link img {
     width: 283px;
     height: auto;
   }
 }
 
 @media (max-width: 1006px) {
-  #header a.logo img {
+  #header a.custom-logo-link img {
     padding: 8px 0;
     width: 213px;
   }
 }
 
 @media (max-width: 767px) {
-  #header a.logo img {
+  #header a.custom-logo-link img {
     width: 300px;
   }
 }
@@ -4006,8 +4010,10 @@ button.btn:hover {
   }
 }
 
-#footer .col3 .icon-box {
-  padding-top: 10px;
+@media (max-width: 767px) {
+  #footer .col3 .icon-box {
+    padding-top: 10px;
+  }
 }
 
 #footer .col3 br {

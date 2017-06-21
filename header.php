@@ -26,7 +26,17 @@
 	<!-- HEADER   -->
     <header id="header" role="banner">
       <div class="container">
-        <a href="/" class="logo"><img src="<?php echo ( get_template_directory_uri() . '/img/logo.png' ); ?>" alt="Molnium"></a>
+      <?php
+        $logo = get_custom_logo();
+
+        if ( $logo ) : ?>
+          <?php echo($logo); ?>
+        <?php else : ?>
+          <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+        <?php
+        endif; 
+      ?>
+
         <div class="header_contact">
           <div class="header_contact-item">
             <i class="ph-icon ph-icon-b icon-rotate">v</i>

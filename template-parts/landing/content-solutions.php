@@ -64,9 +64,9 @@
           </div>
 
           <div class="bottom">
-            <img src="<?php echo ( get_template_directory_uri() . '/img/solut-list.png' ); ?>" alt="">
+            <img src="<?php echo ( get_template_directory_uri() . '/img/solut-bottom.png' ); ?>" alt="">
             <p>Вооружайтесь современными инструментами развития бизнеса. Их уже давно с успехом используют ведущие компании мира: <span>Tinkoff Bank, McDonalds, Booking и многие другие.</span></p>
-            <img src="<?php echo ( get_template_directory_uri() . '/img/solut-list.png' ); ?>" alt="">
+            <img src="<?php echo ( get_template_directory_uri() . '/img/solut-bottom.png' ); ?>" alt="">
           </div>
         </div>
       </div>

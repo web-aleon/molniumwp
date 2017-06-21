@@ -212,7 +212,7 @@ button.btn{
   padding: 18px 0;
   width: 100%;
 
-  a.logo{
+  a.custom-logo-link{
     float: left;
     
     @media (max-width: 767px){
@@ -2923,7 +2923,9 @@ button.btn{
       padding: 0;
     }
     .icon-box{
-      padding-top: 10px;
+      @media (max-width: 767px){
+         padding-top: 10px;
+      }
     }
     br{
       display: none;
