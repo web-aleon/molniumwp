@@ -16,12 +16,11 @@
         <nav class="main-menu clearfix">
           <i id="mobilemenu" class="fa fa-bars"></i>
           <div class="mobilemenushow" style="display: none;"></div>
-          <ul id="headermenu">
-            <li><a href="/">главная</a></li>
-            <li><a href="#">о компании</a></li>
-            <li><a href="#">контакты</a></li>
-            <li><a class="ttu" href="#">блог</a></li>
-          </ul>
+          <?php wp_nav_menu( array(
+                  'theme_location' => 'menu-1',
+                  'menu_id'        => 'headermenu',
+                ) ); ?>
+          
         </nav>
 
     <!-- CONTENT -->

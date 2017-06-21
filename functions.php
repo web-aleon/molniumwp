@@ -44,7 +44,9 @@ function molnium_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'molnium' ),
+		'menu-1' => esc_html__( 'Главное меню', 'molnium' ),
+		'footerPosts' => esc_html__( 'Последние Статьи', 'molnium' ),
+		'footerLinks' => esc_html__( 'Быстрые Ссылки', 'molnium' )
 	) );
 
 	/*
