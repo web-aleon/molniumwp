@@ -59,31 +59,64 @@
         <div class="content-bottom clearfix">
           <div class="col col1">
             <div class="social">
-              <a href="#"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-insta.png' ); ?>" alt=""></a>
-              <a href="#"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-vk.png' ); ?>" alt=""></a>
-              <a href="#"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-youtube.png' ); ?>" alt=""></a>
+
+            <?php
+              $homepage_id = get_page_by_path('home')->ID;
+              $instagram = get_field('instagram', $homepage_id) ? get_field('instagram', $homepage_id) : '#';
+              $vkontakte = get_field('vkontakte', $homepage_id) ? get_field('vkontakte', $homepage_id) : '#';
+              $youtube = get_field('youtube', $homepage_id) ? get_field('youtube', $homepage_id) : '#';
+            ?>
+
+              <a href="<?php echo $instagram; ?>"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-insta.png' ); ?>" alt=""></a>
+              <a href="<?php echo $vkontakte; ?>"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-vk.png' ); ?>" alt=""></a>
+              <a href="<?php echo $youtube; ?>"><img src="<?php echo ( get_template_directory_uri() . '/img/footer-youtube.png' ); ?>" alt=""></a>
             </div>
             <p class="copyright">Copy Rights ©  2017 “Molnium” All Rights Reserved</p>
           </div>
           <div class="col col2">
+
+          <?php 
+          $args = array(
+            'numberposts' => 5,
+            'post_status' => 'publish',
+          ); 
+
+          $result = wp_get_recent_posts($args);
+          ?>
+
             <h3>Последние статьи</h3>
             <ul>
-              <li><a href="#">Маркетинговая стратегия с нуля</a></li>
+
+              <?php
+                foreach( $result as $p ){ 
+              ?>
+                <li><a href="<?php echo get_permalink($p['ID']) ?>"><?php echo $p['post_title'] ?></a></li>  
+              <?php 
+                } 
+              ?>
+
+              <!-- <li><a href="#">Маркетинговая стратегия с нуля</a></li>
               <li><a href="#">Внеконкурентный бизнес уже завтра</a></li>
               <li><a href="#">Где найти состоятельных клиентов</a></li>
               <li><a href="#">Как найти ценных сотрудников</a></li>
-              <li><a href="#">Зачем вести клиентскую базу</a></li>
+              <li><a href="#">Зачем вести клиентскую базу</a></li> -->
             </ul>
           </div>
           <div class="col col3">
             <h3>Быстрые ссылки</h3>
-            <ul>
+            
+            <?php wp_nav_menu( array(
+                  'theme_location' => 'footerLinks',
+                  'menu_id'        => 'footermenu',
+                ) ); 
+            ?>
+            <!-- <ul>
               <li><a href="#">Главная</a></li>
               <li><a href="#">О Компании</a></li>
               <li><a href="#">Контакты</a></li>
               <li><a href="#">Блог</a></li>
               <li><a href="#">Карта сайта</a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
       </div>
